@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const TeeworldsServer = require('teeworlds-info');
-const { parseHost, parsePort } = require('./utils');
+const { parseHost, parsePort, isConfig } = require('./utils');
 
-const host = parseHost(process.argv.slice(1));
-const port = parsePort(process.argv.slice(1));
+const host = parseHost(process.argv[1]);
+const port = parsePort(process.argv[1]);
 
 if (!host) {
   console.error('Undefined host');
@@ -14,9 +14,23 @@ if (!port) {
   process.exit(-1);
 }
 
-const server = new TeeworldsServer(host, port);
-server.ping().then((ping) => {
-  console.log('ping.value %d', ping/1000);
-}).catch(() => {
-  console.log('ping.value %d', -0.1);
-});
+const printConfig = () => {
+  console.log('graph_title Ping to %s:%d Teeworlds Server', host, port);
+  console.log('graph_vlabel roundtrip time (seconds)');
+  console.log('graph_category teeworlds');
+  console.log('ping.label %s:%d', host, port);
+};
+
+const printValues = () => {
+  const server = new TeeworldsServer(host, port);
+  server.ping().then((ping) => {
+    console.log('ping.value %d', ping/1000);
+  }).catch(() => {
+    console.log('ping.value %d', -0.1);
+  });
+};
+
+if (isConfig(process.argv[2]))
+  printConfig();
+else
+  printValues();
