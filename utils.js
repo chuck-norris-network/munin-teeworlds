@@ -14,4 +14,8 @@ module.exports = {
     return matches[1];
   },
 
+  isConfig: (arg) => {
+    return arg === 'config';
+  },
+
 };
