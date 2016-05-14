@@ -24,7 +24,7 @@ const printConfig = () => {
 
 const printValues = () => {
   const server = new TeeworldsServer(host, port);
-  server.getInfo().then((info) => {
+  server.getInfo(5).then((info) => {
     console.log('players.value %d', info.players);
     console.log('spectators.value %d', info.spectators);
   }).catch(() => {

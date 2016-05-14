@@ -23,7 +23,7 @@ const printConfig = () => {
 
 const printValues = () => {
   const server = new TeeworldsServer(host, port);
-  server.ping().then((ping) => {
+  server.ping(5).then((ping) => {
     console.log('ping.value %d', ping/1000);
   }).catch(() => {
     console.log('ping.value %d', -0.1);
