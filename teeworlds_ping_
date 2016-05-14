@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+const TeeworldsServer = require('teeworlds-info');
+const { parseHost, parsePort } = require('./utils');
+
+const host = parseHost(process.argv.slice(1));
+const port = parsePort(process.argv.slice(1));
+
+if (!host) {
+  console.error('Undefined host');
+  process.exit(-1);
+}
+if (!port) {
+  console.error('Undefined port');
+  process.exit(-1);
+}
+
+const server = new TeeworldsServer(host, port);
+server.ping().then((ping) => {
+  console.log('ping.value %d', ping/1000);
+}).catch(() => {
+  console.log('ping.value %d', -0.1);
+});
