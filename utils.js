@@ -1,17 +1,17 @@
 module.exports = {
 
   parseHost: (binary) => {
-    const matches = /teeworlds_ping_([^:]+):[0-9]+$/.exec(binary);
+    const matches = /teeworlds_(info|ping)_([^:$]+)/.exec(binary);
     if (!matches)
       return null;
-    return matches[1];
+    return matches[2];
   },
 
   parsePort: (binary) => {
-    const matches = /teeworlds_ping_[^:]+:([0-9]+)$/.exec(binary);
+    const matches = /teeworlds_(info|ping)_[^:]+:([0-9]+)$/.exec(binary);
     if (!matches)
       return null;
-    return matches[1];
+    return matches[2];
   },
 
   isConfig: (arg) => {
