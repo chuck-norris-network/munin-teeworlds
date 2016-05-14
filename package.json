@@ -1,6 +1,6 @@
 {
   "name": "munin-teeworlds",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Munin plugins for Teeworlds",
   "repository": {
     "type": "git",
