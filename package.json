@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/black-roland/munin-teeworlds#readme",
   "bin": {
-    "teeworlds_ping_": "./teeworlds_ping_"
+    "teeworlds_ping_": "./teeworlds_ping_",
+    "teeworlds_players_": "./teeworlds_players_"
   },
   "devDependencies": {
     "eslint": "^2.10.0"
