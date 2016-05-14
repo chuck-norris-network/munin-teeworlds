@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/black-roland/munin-teeworlds/issues"
   },
-  "homepage": "https://github.com/black-roland/munin-teeworlds#readme"
+  "homepage": "https://github.com/black-roland/munin-teeworlds#readme",
+  "bin": {
+    "teeworlds_ping_": "./teeworlds_ping_"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.0"
+  },
+  "dependencies": {
+    "teeworlds-info": "^1.1.0"
+  }
 }
