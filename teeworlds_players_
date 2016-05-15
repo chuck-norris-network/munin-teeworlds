@@ -28,8 +28,8 @@ const printValues = () => {
     console.log('players.value %d', info.players);
     console.log('spectators.value %d', info.spectators);
   }).catch(() => {
-    console.log('players.value %d', -0.1);
-    console.log('spectators.value %d', -0.1);
+    console.log('players.value U');
+    console.log('spectators.value U');
   });
 };
 

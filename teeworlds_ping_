@@ -26,7 +26,7 @@ const printValues = () => {
   server.ping(5).then((ping) => {
     console.log('ping.value %d', ping/1000);
   }).catch(() => {
-    console.log('ping.value %d', -0.1);
+    console.log('ping.value U');
   });
 };
 
