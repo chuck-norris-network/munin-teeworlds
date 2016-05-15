@@ -2,3 +2,5 @@ node_modules
 npm-debug.log
 teeworlds_ping_*
 teeworlds_players_*
+!teeworlds_ping_
+!teeworlds_players_
