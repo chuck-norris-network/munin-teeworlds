@@ -14,6 +14,12 @@ module.exports = {
     return matches[2];
   },
 
+  parseTimeout: (env) => {
+    if (env)
+      return parseInt(env);
+    return 10;
+  },
+
   isConfig: (arg) => {
     return arg === 'config';
   },
