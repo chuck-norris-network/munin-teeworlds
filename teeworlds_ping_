@@ -16,16 +16,16 @@ if (!port) {
 }
 
 const printConfig = () => {
-  console.log('graph_title Ping to %s:%d Teeworlds Server', host, port);
+  console.log('graph_title Ping to %s:%s Teeworlds Server', host, port);
   console.log('graph_vlabel roundtrip time (seconds)');
   console.log('graph_category teeworlds');
-  console.log('ping.label %s:%d', host, port);
+  console.log('ping.label %s:%s', host, port);
 };
 
 const printValues = () => {
   const server = new TeeworldsServer(host, port);
   server.ping(timeout).then((ping) => {
-    console.log('ping.value %d', ping/1000);
+    console.log('ping.value %s', (ping/1000).toFixed(3));
   }).catch(() => {
     console.log('ping.value U');
   });
