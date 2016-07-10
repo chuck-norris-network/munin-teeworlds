@@ -25,7 +25,7 @@ const printConfig = () => {
 const printValues = () => {
   const server = new TeeworldsServer(host, port);
   server.ping(timeout).then((ping) => {
-    console.log('ping.value %s', (ping/1000).toFixed(3));
+    console.log('ping.value %d', ping/1000);
   }).catch(() => {
     console.log('ping.value U');
   });
