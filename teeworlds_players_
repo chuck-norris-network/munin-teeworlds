@@ -16,7 +16,7 @@ if (!port) {
 }
 
 const printConfig = () => {
-  console.log('graph_title Teeworlds Server info for %s:%d', host, port);
+  console.log('graph_title Teeworlds Server info for %s:%s', host, port);
   console.log('graph_vlabel players count');
   console.log('graph_category teeworlds');
   console.log('players.label online');
