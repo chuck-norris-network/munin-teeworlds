@@ -9,6 +9,7 @@
     "teeworlds_players_": "./teeworlds_players_"
   },
   "scripts": {
+    "lint": "eslint teeworlds_players_ teeworlds_ping_ *.js",
     "current": "ncu --upgrade --upgradeAll"
   },
   "repository": {
