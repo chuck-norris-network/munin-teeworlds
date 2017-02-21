@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/chuck-norris-network/munin-teeworlds#readme",
   "dependencies": {
-    "teeworlds-info": "^1.1.0"
+    "teeworlds-info": "^1.2.1"
   },
   "devDependencies": {
-    "eslint": "^2.10.0",
+    "eslint": "^3.16.0",
     "npm-check-updates": "^2.10.3"
   }
 }
