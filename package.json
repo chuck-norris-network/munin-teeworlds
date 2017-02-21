@@ -1,6 +1,6 @@
 {
   "name": "munin-teeworlds",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Munin plugins for Teeworlds",
   "author": "Black Roland (https://github.com/black-roland)",
   "license": "MIT",
