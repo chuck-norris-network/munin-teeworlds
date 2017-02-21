@@ -2,28 +2,28 @@
   "name": "munin-teeworlds",
   "version": "1.0.6",
   "description": "Munin plugins for Teeworlds",
+  "author": "Black Roland (https://github.com/black-roland)",
+  "license": "MIT",
+  "bin": {
+    "teeworlds_ping_": "./teeworlds_ping_",
+    "teeworlds_players_": "./teeworlds_players_"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/black-roland/munin-teeworlds.git"
+    "url": "git+https://github.com/chuck-norris-network/munin-teeworlds.git"
   },
   "keywords": [
     "munin",
     "teeworlds"
   ],
-  "author": "Black Roland (https://github.com/black-roland)",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/black-roland/munin-teeworlds/issues"
+    "url": "https://github.com/chuck-norris-network/munin-teeworlds/issues"
   },
-  "homepage": "https://github.com/black-roland/munin-teeworlds#readme",
-  "bin": {
-    "teeworlds_ping_": "./teeworlds_ping_",
-    "teeworlds_players_": "./teeworlds_players_"
+  "homepage": "https://github.com/chuck-norris-network/munin-teeworlds#readme",
+  "dependencies": {
+    "teeworlds-info": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^2.10.0"
-  },
-  "dependencies": {
-    "teeworlds-info": "^1.1.0"
   }
 }
