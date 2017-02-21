@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const TeeworldsServer = require('teeworlds-info');
+const { TeeworldsServer } = require('teeworlds-info');
 const { parseHost, parsePort, parseTimeout, isConfig } = require('./utils');
 
 const host = parseHost(process.argv[1]);
@@ -26,7 +26,7 @@ const printConfig = () => {
 const printValues = () => {
   const server = new TeeworldsServer(host, port);
   server.getInfo(timeout).then((info) => {
-    console.log('players.value %d', info.players);
+    console.log('players.value %d', info.online);
     console.log('spectators.value %d', info.spectators);
   }).catch(() => {
     console.log('players.value U');
